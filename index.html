@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Notes Sharing App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📘 EduNotes</h1>
+    <p>Upload &amp; Download Study Notes Easily</p>
+  </header>
+
+  <section class="upload-section">
+    <h2>Upload Notes</h2>
+    <input type="text" id="subject" placeholder="Enter Subject (e.g., Physics)" required />
+    <input type="file" id="file" accept=".pdf,.jpg,.png" required />
+    <button onclick="uploadNote()">Upload</button>
+  </section>
+
+  <section class="notes-list">
+    <h2>Available Notes</h2>
+    <ul id="notesContainer">
+      <!-- Notes will load here -->
+    </ul>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
